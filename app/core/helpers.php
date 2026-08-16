@@ -283,15 +283,15 @@ class App_Helpers {
     ob_start();
 
     if ( false !== strpos( $video_url, 'youtube' ) ) { ?>
-      <?
+      <?php
       // For Youtube
       parse_str( parse_url( $video_url, PHP_URL_QUERY ), $link_params );
       ?>
       <div class="ratio ratio-16x9">
         <iframe loading="lazy" src="<?= esc_url( "https://www.youtube.com/embed/{$link_params['v']}?rel=0" ) ?>" frameborder="0" title="YouTube video" allowfullscreen></iframe>
       </div>
-    <? } elseif ( false !== strpos( $video_url, 'vimeo' ) ) { ?>
-      <?
+    <?php } elseif ( false !== strpos( $video_url, 'vimeo' ) ) { ?>
+      <?php
       // For Vimeo
       $vimeo_id = '';
       $regs     = array();
@@ -302,7 +302,7 @@ class App_Helpers {
       <div class="ratio ratio-16x9">
         <iframe loading="lazy" src="https://player.vimeo.com/video/<?= $vimeo_id ?>" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
-    <? }
+    <?php }
 
     return ob_get_clean();
   }

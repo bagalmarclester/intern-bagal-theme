@@ -49,9 +49,9 @@ class Elem_Header extends Widget_Base {
     $uid   = uniqid( "$class-" );
     ?>
     <div id="<?= $uid ?>" class="<?= $class ?>">
-      <?/* Add HTML/PHP code here */ ?>
+      <?php /* Add HTML/PHP code here */ ?>
 
-      <?/* Add JS below, make sure to use defer for performance. Always select child elements starting from "element" parent variable */ ?>
+      <?php /* Add JS below, make sure to use defer for performance. Always select child elements starting from "element" parent variable */ ?>
       <script defer>
         jQuery(function($) {
           const element = $('<?="#{$uid}"?>');

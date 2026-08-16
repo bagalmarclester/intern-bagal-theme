@@ -6,7 +6,7 @@
 get_header(); ?>
 
   <main class="site-main" role="main">
-    <? the_content(); ?>
+    <?php the_content(); ?>
   </main>
 
 <?php
