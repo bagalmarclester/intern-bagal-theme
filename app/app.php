@@ -46,6 +46,7 @@ try {
 
 // EXTRA MODULES
 require_once 'modules/elementor/elementor.php';
+require_once 'core/asset-rewriter.php';
 
 // CORE CLASS
 final class App_Core {
